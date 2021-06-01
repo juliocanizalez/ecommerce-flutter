@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ecommerce_kiara/screens/sign_up/sign_up_screen.dart';
 import '../constants.dart';
 import '../size_config.dart';
 
@@ -14,10 +14,12 @@ class NoAccountText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
+
           "¿No tienes una cuenta? ",
           style: TextStyle(fontSize: getProportionateScreenWidth(16)),
         ),
         GestureDetector(
+          onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
           child: Text(
             "Registrarse",
             style: TextStyle(
