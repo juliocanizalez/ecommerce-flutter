@@ -99,7 +99,6 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) {
                     if (value.length == 1) {
                       pin4FocusNode.unfocus();
-                      // Then you need to check is the code is correct or not
                     }
                   },
                 ),
