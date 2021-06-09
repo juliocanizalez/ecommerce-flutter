@@ -4,6 +4,8 @@ import 'package:ecommerce_kiara/components/form_error.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import 'package:ecommerce_kiara/screens/login_success/login_success_screen.dart';
+import 'package:ecommerce_kiara/helper/keyboard.dart';
 
 class SignForm extends StatefulWidget {
   @override
@@ -69,6 +71,8 @@ class _SignFormState extends State<SignForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
+                KeyboardUtil.hideKeyboard(context);
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),
